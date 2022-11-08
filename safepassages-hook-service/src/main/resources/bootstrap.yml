@@ -1,0 +1,65 @@
+encrypt.key: ${ENCRYPT_KEY:zEc5OfuvlWruWeqLst2d}
+spring.profiles.active: ${APP_PROFILES:qa-azure}
+spring.application.name: safepassages-hook-service
+
+server.port: 8092
+
+# application insight integration prop.
+azure:
+  application-insights:
+    instrumentation-key: ${INSTRUMENTATION_KEY:000-000}
+
+hystrix:
+  shareSecurityContext: true
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 25000
+
+feign:
+  hystrix:
+    enabled: true
+  client:
+    config:
+      default:
+        connectTimeout: 30000
+        readTimeout: 50000
+
+---
+spring:
+  profiles: my-azure
+  cloud:
+    config:
+      uri: http://config.ecv.svc.cluster.local:8888
+      fail-fast: true
+      password: br5hiBRAcr=VaFOyEthi
+      username: ecarevault-my
+---
+spring:
+  profiles: dev-azure
+  cloud:
+    config:
+      uri: http://config.ecv.svc.cluster.local:8888
+      fail-fast: true
+      password: cl4IsIwOdlt-chituK5s
+      username: ecarevault-dev
+---
+spring:
+  profiles: qa-azure
+  cloud:
+    config:
+      uri: http://config.ecv.svc.cluster.local:8888
+      fail-fast: true
+      password: cl4IsIwOdlt-chituK5s
+      username: ecarevault-dev
+---
+spring:
+  profiles: staging-azure
+  cloud:
+    config:
+      uri: http://config.ecv.svc.cluster.local:8888
+      fail-fast: true
+      password: cl4IsIwOdlt-chituK5s
+      username: ecarevault-dev

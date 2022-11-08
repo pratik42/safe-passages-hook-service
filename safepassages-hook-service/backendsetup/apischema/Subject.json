@@ -1,0 +1,426 @@
+{
+   "$schema": "http://json-schema.org/draft-04/schema#",
+   "title": "Subject",
+   "type": "object",
+   "properties": {
+      "subjectId": {
+         "type": "integer",
+         "format": "int64"
+      },
+      "accountId": {
+         "type": "integer",
+         "format": "int64"
+      },
+      "resource": {
+         "type": "string"
+      },
+      "firstName": {
+         "type": "string",
+         "maxLength": "50",
+         "pattern": "^[^<>]*$"
+      },
+      "fullName": {
+         "type": "string",
+         "maxLength": "50",
+         "pattern": "^[^<>]*$"
+      },
+      "lastName": {
+         "type": "string",
+         "maxLength": "50",
+         "pattern": "^[^<>]*$"
+      },
+      "middleName": {
+         "type": "string",
+         "maxLength": "50",
+         "pattern": "^[^<>]*$"
+      },
+      "gender": {
+         "type": "string",
+         "maxLength": "1",
+         "pattern": "^$|^[M|F|O]$"
+      },
+      "zip": {
+         "type": "string",
+         "maxLength": "15",
+         "pattern": "^[a-zA-Z0-9-\\s]*$"
+      },
+      "gradeLevel": {
+         "type": "string"
+      },
+      "school": {
+         "type": "string"
+      },
+      "birthDate": {
+         "type": "integer",
+         "format": "int64"
+      },
+      "photo": {
+         "type": "string"
+      },
+      "photoMimeType": {
+         "type": "string"
+      },
+      "familyGroupId": {
+         "type": "integer",
+         "format": "int64"
+      },
+      "organizationGroupIds": {
+         "type": "array",
+         "items": {
+            "type": "integer",
+            "format": "int64"
+         }
+      },
+      "createGroupId": {
+         "type": "integer",
+         "format": "int64"
+      },
+      "parentEmail": {
+         "type": "string"
+      },
+      "parentFirstName": {
+         "type": "string"
+      },
+      "parentLastName": {
+         "type": "string"
+      },
+      "parentId": {
+         "type": "integer",
+         "format": "int64"
+      },
+      "documentId": {
+         "type": "integer",
+         "format": "int64"
+      },
+      "ownerId": {
+         "type": "integer",
+         "format": "int64"
+      },
+      "originalOwnerId": {
+         "type": "integer",
+         "format": "int64"
+      },
+      "teamRoleId": {
+         "type": "integer",
+         "format": "int64"
+      },
+      "teamRole": {
+         "type": "string",
+         "maxLength": "50",
+         "pattern": "^[a-zA-Z0-9-/\\u00C0-\\u017F\\s()]*$"
+      },
+      "callerId": {
+         "type": "integer",
+         "format": "int64"
+      },
+      "isActive": {
+         "type": "boolean"
+      },
+      "isActiveTeamMember": {
+         "type": "boolean"
+      },
+      "cognitoIdentityId": {
+         "type": "string"
+      },
+      "methodName": {
+         "type": "string"
+      },
+      "isFormerTeamMember": {
+         "type": "boolean"
+      },
+      "providerStartDate": {
+         "type": "integer",
+         "format": "int64"
+      },
+      "exitDate": {
+         "type": "integer",
+         "format": "int64"
+      },
+      "isFrozen": {
+         "type": "boolean"
+      },
+      "frozenDate": {
+         "type": "integer",
+         "format": "int64"
+      },
+      "bgColor": {
+         "type": "string"
+      },
+      "about": {
+         "type": "string"
+      },
+      "aboutAddedBy": {
+         "type": "integer",
+         "format": "int64"
+      },
+      "canBeDeleted": {
+         "type": "boolean"
+      },
+      "coCaptain": {
+         "type": "boolean"
+      },
+      "subjectTypeId": {
+         "type": "string"
+      },
+      "projectId": {
+         "type": "integer",
+         "format": "int64"
+      },
+      "projectName": {
+         "type": "string",
+         "maxLength": "50"
+      },
+      "projectTypeId": {
+         "type": "string",
+         "maxLength": "50"
+      },
+      "startDate": {
+         "type": "integer",
+         "format": "int64"
+      },
+      "endDate": {
+         "type": "integer",
+         "format": "int64"
+      },
+      "projectDescription": {
+         "type": "string",
+         "maxLength": "500"
+      },
+      "teamPartyId": {
+         "type": "integer",
+         "format": "int64"
+      },
+      "teamOrgName": {
+         "type": "string"
+      },
+      "teamOrgShortName": {
+         "type": "string"
+      },
+      "teamOrgId": {
+         "type": "integer",
+         "format": "int64"
+      },
+      "teamPartyParentId": {
+         "type": "integer",
+         "format": "int64"
+      },
+      "teamId": {
+         "type": "integer",
+         "format": "int64"
+      },
+      "teamType": {
+         "type": "string"
+      },
+      "localId": {
+         "type": "string"
+      },
+      "studentId": {
+         "type": "string"
+      },
+      "gradeId": {
+         "type": "integer",
+         "format": "int64"
+      },
+      "gradeNumber": {
+         "type": "integer"
+      },
+      "gradeDisplay": {
+         "type": "string"
+      },
+      "gradeSystem": {
+         "type": "string"
+      },
+      "schoolId": {
+         "type": "integer",
+         "format": "int64"
+      },
+      "schoolName": {
+         "type": "string"
+      },
+      "districtId": {
+         "type": "integer",
+         "format": "int64"
+      },
+      "districtName": {
+         "type": "string"
+      },
+      "graduationYear": {
+         "type": "string"
+      },
+      "enrollmentStatus": {
+         "type": "string"
+      },
+      "tierId": {
+         "type": "integer",
+         "format": "int64"
+      },
+      "tierNumber": {
+         "type": "integer"
+      },
+      "tierDisplay": {
+         "type": "string"
+      },
+      "tierSystem": {
+         "type": "string"
+      },
+      "districtTierName": {
+         "type": "string"
+      },
+      "placementId": {
+         "type": "integer",
+         "format": "int64"
+      },
+      "placementStatus": {
+         "type": "string"
+      },
+      "placementSetting": {
+         "type": "string"
+      },
+      "placementSchoolId": {
+         "type": "integer",
+         "format": "int64"
+      },
+      "placementSchoolName": {
+         "type": "string"
+      },
+      "placementStartDate": {
+         "type": "integer",
+         "format": "int64"
+      },
+      "placementEndDate": {
+         "type": "integer",
+         "format": "int64"
+      },
+      "customAttributesString": {
+         "type": "string"
+      },
+      "password": {
+         "type": "string"
+      },
+      "status": {
+         "type": "string"
+      },
+      "message": {
+         "type": "string"
+      },
+      "customAttributesMap": {
+         "type": "object",
+         "javaType": "java.util.Map<String,Object>"
+      },
+      "deleteAssignedForm": {
+         "type": "boolean"
+      },
+      "hash": {
+         "type": "string"
+      },
+      "clientId": {
+         "type": "integer",
+         "format": "int64"
+      },
+      "context": {
+         "type": "string"
+      },
+      "subjectIds": {
+         "type": "array",
+         "items": {
+            "type": "integer",
+            "format": "int64"
+         }
+      },
+      "subjectAttributes": {
+         "type": "object",
+         "javaType": "java.util.Map<String, java.util.Map<String,java.util.List<String>>>"
+      },
+      "isMigration": {
+         "type": "boolean",
+         "default": false
+      },
+      "invitationRecordId": {
+         "type": "integer",
+         "format": "int64"
+      },
+      "leaId": {
+         "type": "integer",
+         "format": "int64"
+      },
+      "campusId": {
+         "type": "integer",
+         "format": "int64"
+      },
+      "keywords": {
+         "type": "array",
+         "items": {
+            "type": "string"
+         }
+      },
+      "workflowId": {
+         "type": "integer",
+         "format": "int64"
+      },
+      "dateOfBirth": {
+         "type": "string"
+      },
+      "role": {
+         "type": "string"
+      },
+      "isRequestThaw": {
+         "type": "boolean",
+         "default": true
+      },
+      "tenantId": {
+         "type": "integer",
+         "format": "int64"
+      },
+      "keepOldKeywords": {
+         "type": "boolean",
+         "default": false
+      },
+      "inviteProviders": {
+         "type": "boolean",
+         "default": true
+      },
+      "channelId": {
+         "type": "string"
+      },
+      "createdAt": {
+         "type": "integer",
+         "format": "int64"
+      },
+      "isSchemaValidation": {
+         "type": "boolean"
+      },
+      "includeCustomAttributesTemplate": {
+         "type": "boolean",
+         "default": false
+      },
+      "includeCustomAttributes": {
+         "type": "boolean",
+         "default": false
+      },
+      "convertAttributeValues": {
+         "type": "boolean",
+         "default": false
+      },
+      "isDeterminationUpdate": {
+         "type": "boolean"
+      },
+      "jobTitle": {
+         "type": "string"
+      },
+      "isR10WorkflowRequest": {
+         "type": "boolean",
+         "default": false
+      },
+      "created_by": {
+         "type": "integer",
+         "format": "int64"
+      },
+      "isCreateSubjectOnBehalf": {
+         "type": "boolean",
+         "default": false
+      },
+      "isTeamMember": {
+         "type": "boolean"
+      }
+   }
+}
